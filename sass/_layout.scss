@@ -1,0 +1,136 @@
+//Variables
+$font-style: 'Raleway', sans-serif;
+
+//General
+
+.section {
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+
+.thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+//Hero Section
+
+.hero {
+    position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+    text-align: center;
+
+
+    
+
+    &__background {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-color: #2196F3;
+    z-index: -1;
+    background-image: url('/assets/img/martin-adams-711613-unsplash.jpg');
+    
+        &:after {
+             content: '';
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+	        height: 100%;
+	        background-color: black;
+	        opacity: 0.75;
+         }
+    }
+
+    &__header {
+        padding: 0 1.5rem;
+
+        &--primary {
+            font-family: $font-style;
+            font-weight: 400;
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &--secondary {
+            font-family: $font-style;
+            font-weight: 400;
+            font-size: 2.8rem;
+        }
+    }
+
+   
+
+   
+}  
+.down-arrow {
+   
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    color: #fff;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 5rem;
+    border-radius: 10rem;
+    font-size: 2.5rem;
+    -webkit-border-radius: 10rem;
+    overflow: hidden;
+    margin-left: 0px;
+    bottom: 10rem;
+    margin-top: 5rem;
+    position: absolute;
+
+    // @media (max-width: 800px) {
+    //     padding: 15px 40px;
+    // }
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.fa { 
+    font-size: 1.5rem;
+    line-height: 3.2rem;
+    
+}
+
+//About section
+.about {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid rgba(144, 144, 144, 0.25);
+    min-height: 100vh;
+
+    &__title {
+        font-family: $font-style;
+        font-weight: 400;
+        font-size: 6rem;
+        margin-bottom: 1.5rem;
+        padding-top: 8rem;
+        color:#615e5e;
+        border-bottom: 3px solid #66b3ff;
+    }
+
+    &__text {
+        font-size: 3rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        color: #615e5e;
+        padding-bottom: 2.5rem;
+
+        &--sides {
+            border-left: 3px solid #66b3ff;
+            padding-left: 1rem;
+            
+        }
+    }
+}

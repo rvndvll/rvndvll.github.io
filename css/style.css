@@ -1,0 +1,187 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.hero {
+  position: relative;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center; }
+  .hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #2196F3;
+    z-index: -1;
+    background-image: url("/assets/img/martin-adams-711613-unsplash.jpg"); }
+    .hero__background:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.75; }
+  .hero__header {
+    padding: 0 1.5rem; }
+    .hero__header--primary {
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+      font-size: 6rem;
+      margin-bottom: 1.5rem; }
+    .hero__header--secondary {
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+      font-size: 2.8rem; }
+
+.down-arrow {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  line-height: 5rem;
+  border-radius: 10rem;
+  font-size: 2.5rem;
+  -webkit-border-radius: 10rem;
+  overflow: hidden;
+  margin-left: 0px;
+  bottom: 10rem;
+  margin-top: 5rem;
+  position: absolute; }
+  .down-arrow:hover {
+    opacity: 0.7; }
+
+.fa {
+  font-size: 1.5rem;
+  line-height: 3.2rem; }
+
+.about {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid rgba(144, 144, 144, 0.25);
+  min-height: 100vh; }
+  .about__title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+    padding-top: 8rem;
+    color: #615e5e;
+    border-bottom: 3px solid #66b3ff; }
+  .about__text {
+    font-size: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    color: #615e5e;
+    padding-bottom: 2.5rem; }
+    .about__text--sides {
+      border-left: 3px solid #66b3ff;
+      padding-left: 1rem; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.navbar {
+  color: #ffffff; }
+  @media only screen and (max-width: 37.5em) {
+    .navbar {
+      display: none; } }
+  .navbar__logo {
+    padding: 1.5rem;
+    font-weight: 400;
+    color: #ffffff; }
+  .navbar__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row; }
+  .navbar__item {
+    padding: 1.5rem; }
+  .navbar__link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2.5rem;
+    font-family: "Raleway", sans-serif; }
+    .navbar__link:hover {
+      opacity: 0.7; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2.5rem 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2.5rem 3.5rem; } }
+  .cards__card {
+    flex: 0 1 calc(23% - 1em);
+    background-color: #ffffff;
+    margin-bottom: 2.5rem;
+    border: solid 1px rgba(144, 144, 144, 0.25); }
+    @media only screen and (max-width: 75em) {
+      .cards__card {
+        flex: 0 1 calc(25% - 1em); } }
+    @media only screen and (max-width: 56.25em) {
+      .cards__card {
+        flex: 0 1 calc(50% - 1em); } }
+    @media only screen and (max-width: 37.5em) {
+      .cards__card {
+        flex: 0 1 100%; } }
+
+.card-content {
+  padding: 1.4rem;
+  background-color: #ffffff; }
+  .card-content--primary {
+    margin-top: 0;
+    margin-bottom: .8rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #615e5e; }
+  .card-content--secondary {
+    font-size: 1.7rem;
+    margin-bottom: 1em;
+    color: #898989; }
