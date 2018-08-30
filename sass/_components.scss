@@ -18,54 +18,20 @@ $font-style: 'Raleway', sans-serif;
 	justify-content: space-between;
     align-items: center;
     // background-color: #66b3ff;
-    
    
+
 }
 
 //Navbar
 
-// .navbar-menu {
-//     display: flex;
-//     flex-direction: column;
-//     padding: 1.5rem;
 
-
-//     &--1 {
-//         display: block;
-// 	width: 3rem;
-// 	height: 2px;
-// 	background: #fff;
-// 	margin-bottom: 6px;
-// 	transition: all 300ms ease;
-//     }
-
-//     &--2 {
-//         display: block;
-//         width: 3rem;
-//         height: 2px;
-//         // margin-left: 4px;
-//         margin-bottom: 6px;
-//         background: #fff;
-//         transition: all 300ms ease; 
-//     }
-
-//     &--3 {
-//         display: block;
-//         width: 3rem;
-//         height: 2px;
-//         // margin-left: 4px;
-//         margin-bottom: 6px;
-//         background: #fff;
-//         // transition: all 300ms ease;
-//     }
-// }
 
 .navbar {
     
     color: $primary-color;
-    @include respond(phone) {
-        display: none;
-    }
+    // @include respond(phone) {
+    //     display: none;
+    // }
   
 
     &__logo {
@@ -78,7 +44,11 @@ $font-style: 'Raleway', sans-serif;
     &__list {
         list-style: none;
         display: flex;
-    flex-direction: row;
+        flex-direction: row;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     
     }
 

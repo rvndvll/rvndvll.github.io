@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.2.0",
+    "hamburgers": "^0.9.3",
     "node-sass": "^4.9.3"
   }
 }
