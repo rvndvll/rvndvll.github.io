@@ -39,7 +39,7 @@ function classToggle() {
 // });
 
 //trigger the scroll
-$(window).scroll(); //ensure if you're in current position when page is refreshed
+// $(window).scroll(); //ensure if you're in current position when page is refreshed
 
 // const initialTopOffset = document.querySelector("#home").offsetTop;
 // window.addEventListener('scroll', function(event) {
