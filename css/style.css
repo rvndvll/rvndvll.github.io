@@ -822,6 +822,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
+  .header--blue {
+    background-color: #66b3ff; }
   @media only screen and (max-width: 37.5em) {
     .header {
       flex-direction: column; } }

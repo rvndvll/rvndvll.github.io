@@ -18,6 +18,11 @@ $font-style: 'Raleway', sans-serif;
 	justify-content: space-between;
     // align-items: flex-start;
     // background-color: #66b3ff;
+
+    &--blue{
+        background-color: #66b3ff;
+    }
+
     @include respond(phone) {
         flex-direction: column;
     }

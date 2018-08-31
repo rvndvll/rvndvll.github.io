@@ -27,3 +27,35 @@ function classToggle() {
     });
   }
 
+//   var initialTopOffset = $('.header').offset().top;
+// $(window).scroll(function(event) {
+//   var scroll = $(window).scrollTop();
+//   // if the top of our browser is inside the section2
+//   if (scroll + initialTopOffset >= $('.about').offset().top && scroll + initialTopOffset <= $('.about').offset().top + $('.about').outerHeight()) {
+//     $('header').addClass('header--blue'); // add the class
+//   } else {
+//     $('header').removeClass('blue'); // remove the class
+//   }
+// });
+
+//trigger the scroll
+$(window).scroll(); //ensure if you're in current position when page is refreshed
+
+// const initialTopOffset = document.querySelector("#home").offsetTop;
+// window.addEventListener('scroll', function(event) {
+//   const scroll = window.scrollTop;
+//   // window.addEventListener('scroll', top);
+//   if (scroll + initialTopOffset >= document.querySelector('.about').offsetTop && scroll + initialTopOffset <= document.querySelector('.about').offsetTop + document.querySelector('.about').outHeight) {
+//     if (document.querySelector('header').classList) {
+//       this.add('header--blue');
+//    } else {
+//     console.log('gahhhhhhhh')
+//   }
+//  } else {
+//     console.log('booo');
+//   }
+// });
+
+// window.addEventListener('scroll', window);
+
+
