@@ -129,12 +129,17 @@ $font-style: 'Raleway', sans-serif;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 2.5rem 5rem;
+    // animation: moveInBottom 0.5s ease-out .50s;
 
    @include respond(phone) {
        display: flex;
        flex-wrap: wrap;
        justify-content: space-between;
        padding: 2.5rem 3.5rem;
+   }
+
+   &--animated {
+    animation: moveInLeft 1s ease-out .1s;
    }
 
 

@@ -721,6 +721,16 @@ html {
 body {
   box-sizing: border-box; }
 
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 .section {
   display: flex;
   flex-direction: column;
@@ -883,6 +893,8 @@ body {
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 2.5rem 3.5rem; } }
+  .cards--animated {
+    animation: moveInLeft 1s ease-out .1s; }
   .cards__card {
     flex: 0 1 calc(23% - 1em);
     background-color: #ffffff;

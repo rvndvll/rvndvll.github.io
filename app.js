@@ -6,6 +6,7 @@ function classToggle() {
   document.querySelector('.header__hamburger--toggle')
     .addEventListener('click', classToggle);
 
+    //hamburger animation
     /**
    * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
    *
@@ -27,35 +28,42 @@ function classToggle() {
     });
   }
 
-//   var initialTopOffset = $('.header').offset().top;
-// $(window).scroll(function(event) {
-//   var scroll = $(window).scrollTop();
-//   // if the top of our browser is inside the section2
-//   if (scroll + initialTopOffset >= $('.about').offset().top && scroll + initialTopOffset <= $('.about').offset().top + $('.about').outerHeight()) {
-//     $('header').addClass('header--blue'); // add the class
-//   } else {
-//     $('header').removeClass('blue'); // remove the class
-//   }
-// });
+// change navbar
+window.onscroll = function changeNav() {
+  const navbar = document.getElementById('header');
+  const secondSection = document.getElementById('about');
+  const secondSectionTop = secondSection.getBoundingClientRect().top;
+  const navbarHeight = navbar.getBoundingClientRect().height;
 
-//trigger the scroll
-// $(window).scroll(); //ensure if you're in current position when page is refreshed
-
-// const initialTopOffset = document.querySelector("#home").offsetTop;
-// window.addEventListener('scroll', function(event) {
-//   const scroll = window.scrollTop;
-//   // window.addEventListener('scroll', top);
-//   if (scroll + initialTopOffset >= document.querySelector('.about').offsetTop && scroll + initialTopOffset <= document.querySelector('.about').offsetTop + document.querySelector('.about').outHeight) {
-//     if (document.querySelector('header').classList) {
-//       this.add('header--blue');
-//    } else {
-//     console.log('gahhhhhhhh')
-//   }
-//  } else {
-//     console.log('booo');
-//   }
-// });
-
-// window.addEventListener('scroll', window);
+  if(secondSectionTop >= navbarHeight) {
+    navbar.className = ('header')
+  } else if(secondSectionTop <= navbarHeight) {
+    navbar.className = ('header header--blue')
+  }
+}
+//animations on screen
 
 
+const scrollEventHandler = () => {
+  const cards = document.querySelector('.cards');
+  const cardsClasses = cards.classList;
+  if (isScrolledIntoView(document.getElementById('home'))) {
+    cardsClasses.remove('cards--animated')
+  } else {
+    cardsClasses.add('cards--animated')
+  }
+};
+
+document.addEventListener('scroll', scrollEventHandler);
+
+function isScrolledIntoView(el) {
+  const rect = el.getBoundingClientRect();
+  const elemTop = rect.top;
+  const elemBottom = rect.bottom;
+
+  // Only completely visible elements return true:
+  const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  // Partially visible elements return true:
+  //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+  return isVisible;
+}
